@@ -4,7 +4,7 @@ def study_schedule(permanence_period, target_time):
         for entry, exit in permanence_period:
             if entry <= target_time <= exit:
                 counter += 1
-    
+
         return counter
-    except: 
+    except:
         return None
