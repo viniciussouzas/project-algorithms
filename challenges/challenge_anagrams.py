@@ -7,6 +7,7 @@ def sort(word, start=0, end=None):
         sort(word, middle, end)
         merge(word, start, middle, end)
 
+
 def merge(word, start, middle, end):
     left_part = word[start:middle]
     right_part = word[middle:end]
@@ -27,14 +28,14 @@ def merge(word, start, middle, end):
             word[main_index] = right_part[right_index]
             right_index = right_index + 1
 
+
 def is_anagram(first_string, second_string):
 
     if not first_string and not second_string:
         return first_string, second_string, False
-    
+
     first_lowered = list(first_string.lower())
     second_lowered = list(second_string.lower())
-
 
     sort(first_lowered)
     sort(second_lowered)
